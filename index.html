@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	 <style type="text/css">
+	 	.box{
+	 		width: 400px;
+	 		height: 300px;
+	 		
+	 	}
+
+	 	.img1{
+	 		position: absolute;
+	 		top: 300px; left: 550px;
+	 		transition: 2s;
+	 		background-image: url(1.jpg);
+	 		background-size: 100% 100%;
+	 		
+	 	}
+	 	.img2{
+	 		position: absolute;
+	 		top: 300px; left: 1050px;
+	 		transition: 2s;
+	 		background-image: url(2.webp);
+	 		background-size: 100% 100%;
+
+	 	}
+	 	.img3{
+	 		position: absolute;
+	 		top: 300px; left: 1550px;
+	 		transition: 2s;
+	 		background-image: url(3.jpg);
+	 		background-size: 100% 100%;
+	 	}
+	 	.img4{
+	 		position: absolute;
+	 		top: 750px; left: 550px;
+	 		transition: 2s;
+	 		background-image: url(4.jpg);
+	 		background-size: 100% 100%;
+	 	}
+	 	.img5{
+	 		position: absolute;
+	 		top: 750px; left: 1050px;
+	 		transition: 2s;
+	 		background-image: url(5.png);
+	 		background-size: 100% 100%;
+	 	}
+	 	.img6{
+	 		position: absolute;
+	 		top: 750px; left: 1550px;
+	 		transition: 2s;
+	 		background-image: url(6.webp);
+	 		background-size: 100% 100%;
+	 	}
+	 	.btn1{
+	 		position: absolute;
+	 		top: 100px; left: 1170px;
+	 	}
+	 	.btn{
+	 		background: white;
+	 	}
+	 	.h1{
+	 		position: absolute;
+	 		top: 20px; left: 1100px;
+	 	}
+	 	.txt{
+	 		position: absolute;
+	 		top: 150px; left: 1130px;
+	 	}
+	 	.l{
+	 		background: white;
+	 		width: 500px;
+	 		height: 500px;
+	 		position: absolute;
+	 		top: 500px; left: 1050px;
+	 		display: none;
+	 	}
+	 	 .w{
+	 		background: white;
+	 		width: 500px;
+	 		height: 500px;
+	 		position: absolute;
+	 		top: 500px; left: 1050px;
+	 		display: none;
+	 	}
+	 	.q{
+	 		position: absolute;
+	 		top: 200px; left: 150px;
+	 	}
+	 </style>
+</head>
+<body>
+	<div class="col" style="height: 1313px; background: #72e5ed;">
+		<div class="h1">
+			<h1>У тебя <span class="num">3</span> попыток</h1>
+		</div>
+		<div class="btn1">
+			<button class="btn" >Перемещать</button>
+		</div>
+		<div class="txt">
+			<h1>Найди Маку</h1>
+		</div>
+
+		<div class="img1 box"></div>
+		<div class="img2 box"></div>
+		<div class="img3 box"></div>
+		<div class="img4 box"></div>
+		<div class="img5 box"></div>
+		<div class="img6 box"></div>
+
+		<div class="l">
+			<div class="q">
+				<h1 class="text-center">YOU LOSE((</h1>
+			</div>
+			
+		</div>
+		<div class="w">
+			<div class="q">
+				<h1 class="text-center">YOU WIN!!!</h1>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+<script type="text/javascript">
+	let n = 3
+	let px = "px"
+	
+	document.querySelector(".btn").onclick = function(){
+		document.querySelector(".img1").style.background = "url(7.jpg)"
+		document.querySelector(".img1").style.backgroundSize = "100% 100%"
+		document.querySelector(".img2").style.background = "url(7.jpg)"
+		document.querySelector(".img2").style.backgroundSize = "100% 100%"
+		document.querySelector(".img3").style.background = "url(7.jpg)"
+		document.querySelector(".img3").style.backgroundSize = "100% 100%"
+		document.querySelector(".img4").style.background = "url(7.jpg)"
+		document.querySelector(".img4").style.backgroundSize = "100% 100%"
+		document.querySelector(".img5").style.background = "url(7.jpg)"
+		document.querySelector(".img5").style.backgroundSize = "100% 100%"
+		document.querySelector(".img6").style.background = "url(7.jpg)"
+		document.querySelector(".img6").style.backgroundSize = "100% 100%"
+
+		document.querySelector(".img1").style.left = 1550 + px
+		document.querySelector(".img2").style.left = 1050 + px
+		document.querySelector(".img2").style.top = 750 + px
+		document.querySelector(".img3").style.left = 600 + px
+
+		document.querySelector(".img4").style.left = 1050 + px
+		document.querySelector(".img4").style.top = 300 + px
+		document.querySelector(".img5").style.left = 1550 + px
+		document.querySelector(".img6").style.left = 600 + px
+	}
+
+	document.querySelector(".img1").onclick = function(){
+		alert("Ты победил!");
+		document.querySelector(".w").style.display = "block"
+		document.querySelector(".img1").style.background = "url(1.jpg)"
+		document.querySelector(".img1").style.backgroundSize = "100% 100%"
+	}
+	document.querySelector(".img2").onclick = function(){
+		n = n - 1
+		document.querySelector(".num").innerHTML = n
+		alert("Ты проиграл");
+		document.querySelector(".img2").style.background = "url(2.webp)"
+		document.querySelector(".img2").style.backgroundSize = "100% 100%"
+		if(n == 0){
+			document.querySelector(".l").style.display = "block"
+		}
+	}
+		document.querySelector(".img3").onclick = function(){
+		n = n - 1
+		document.querySelector(".num").innerHTML = n
+		alert("Ты проиграл");
+		document.querySelector(".img3").style.background = "url(3.jpg)"
+		document.querySelector(".img3").style.backgroundSize = "100% 100%"
+		if(n == 0){
+			document.querySelector(".l").style.display = "block"
+		}
+	}
+		document.querySelector(".img4").onclick = function(){
+		n = n - 1
+		document.querySelector(".num").innerHTML = n
+		alert("Ты проиграл");
+		document.querySelector(".img4").style.background = "url(4.jpg)"
+		document.querySelector(".img4").style.backgroundSize = "100% 100%"
+		if(n == 0){
+			document.querySelector(".l").style.display = "block"
+		}
+	}
+		document.querySelector(".img5").onclick = function(){
+		n = n - 1
+		document.querySelector(".num").innerHTML = n
+		alert("Ты проиграл");
+		document.querySelector(".img5").style.background = "url(5.png)"
+		document.querySelector(".img5").style.backgroundSize = "100% 100%"
+		if(n == 0){
+			document.querySelector(".l").style.display = "block"
+		}
+	}
+		document.querySelector(".img6").onclick = function(){
+		n = n - 1
+		document.querySelector(".num").innerHTML = n
+		alert("Ты проиграл");
+		document.querySelector(".img6").style.background = "url(6.webp)"
+		document.querySelector(".img6").style.backgroundSize = "100% 100%"
+		if(n == 0){
+			document.querySelector(".l").style.display = "block"
+		}
+	}
+
+
+
+</script>
+</body>
+</html>
